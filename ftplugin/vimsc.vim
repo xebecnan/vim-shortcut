@@ -15,6 +15,9 @@ fun! s:VimscGetLine()
     elseif line =~ '^!.*$'
         norm 0ly$
         exec "!cd %:p:h && " . @"
+    elseif line =~ '^$.*$'
+        norm 0ly$
+        exec "silent !cd %:p:h && " . @"
     endif
 endfun
 
