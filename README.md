@@ -39,6 +39,11 @@ run vim command from vim buffer
 # 查看 nginx log
 :!sudo tail -n 50 /var/log/nginx/error.log
 :!sudo tail -n 50 /var/log/nginx/access.log
+
+# 随机抽取一个卡片盒笔记
+$!python X:\scripts\zettel-fleeting-note-pick\main.py > X:\scripts\zettel-fleeting-note-pick\output.txt
+# 查看抽取结果
+:vs ++enc=cp936 X:\scripts\zettel-fleeting-note-pick\output.txt
 ```
 
 # 通过 vim-plug 安装:
